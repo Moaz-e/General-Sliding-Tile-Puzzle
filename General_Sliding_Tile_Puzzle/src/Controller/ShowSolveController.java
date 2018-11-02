@@ -15,16 +15,19 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -44,12 +47,28 @@ public class ShowSolveController implements Initializable {
     @FXML
     private TextField NumberAllMove;
 
+    Timeline timeline;
+
     /**
      * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        timeline = new Timeline(new KeyFrame(
+                Duration.millis(1000),
+                ae -> startTimeLine()));
+        timeline.setCycleCount(Animation.INDEFINITE);
+    }
+
+    void startTimeLine() {
+        getNextGrid();
+        if (NumGrid >= MaxNumGrid) {
+            timeline.stop();
+        }
     }
 
     public void setSon(HashMap<Grid, Grid> Son) {
@@ -97,7 +116,6 @@ public class ShowSolveController implements Initializable {
         if (Son.get(MyGrid) == null) {
             return;
         }
-        GridPane.getChildren().clear();
         MyGrid = Son.get(MyGrid);
         this.setGrid(MyGrid);
         NumGrid++;
@@ -113,7 +131,6 @@ public class ShowSolveController implements Initializable {
         if (Father.get(MyGrid) == null) {
             return;
         }
-        GridPane.getChildren().clear();
         MyGrid = Father.get(MyGrid);
         this.setGrid(MyGrid);
         NumGrid--;
@@ -150,6 +167,17 @@ public class ShowSolveController implements Initializable {
         while (x > NumGrid) {
             this.getNextGrid();
         }
+    }
+
+    @FXML
+    private void StartAnimation(ActionEvent event) {
+        timeline.play();
+
+    }
+
+    @FXML
+    private void StopAnimation(ActionEvent event) {
+        timeline.stop();
     }
 
 }

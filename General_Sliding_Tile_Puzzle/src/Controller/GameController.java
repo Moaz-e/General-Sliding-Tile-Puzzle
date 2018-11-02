@@ -260,7 +260,7 @@ public class GameController implements Initializable {
 
     private void Go(HashMap<Grid, Grid> Father, Grid G) {
         HashMap<Grid, Grid> Son = new HashMap<>();
-        int x=0;
+        int x = 0;
         while (Father.get(G) != null) {
             x++;
             Grid fa = Father.get(G);

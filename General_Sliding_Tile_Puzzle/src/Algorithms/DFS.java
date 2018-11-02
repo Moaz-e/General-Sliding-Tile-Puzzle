@@ -9,6 +9,7 @@ import general_sliding_tile_puzzle.Grid;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -26,10 +27,11 @@ public class DFS extends Graph {
 
     @Override
     public Grid getSolve(Grid g) {
-        HashSet<Integer> Set = new HashSet<>();
+        Set<Integer> Set = new HashSet<>();
         Stack<Grid> q = new Stack<>();
         g = new Grid(g);
         q.add(g);
+        Set.add(g.hashCode());
         while (!q.isEmpty()) {
             NumMoveToSolve++;
             Grid grid = q.pop();

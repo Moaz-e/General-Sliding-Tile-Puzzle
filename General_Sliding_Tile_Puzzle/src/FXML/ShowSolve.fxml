@@ -23,10 +23,12 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <JFXButton layoutX="461.0" layoutY="71.0" onAction="#next" prefHeight="43.0" prefWidth="115.0" text="next" />
-      <JFXButton layoutX="461.0" layoutY="114.0" onAction="#previous" prefHeight="43.0" prefWidth="115.0" text="previous" />
+      <JFXButton layoutX="461.0" layoutY="182.0" onAction="#next" prefHeight="43.0" prefWidth="115.0" text="next" />
+      <JFXButton layoutX="461.0" layoutY="225.0" onAction="#previous" prefHeight="43.0" prefWidth="115.0" text="previous" />
       <JFXButton layoutX="461.0" layoutY="392.0" onAction="#back" prefHeight="43.0" prefWidth="115.0" text="back" />
-      <TextField fx:id="NumGridShow" accessibleRole="TEXT" layoutX="461.0" layoutY="225.0" onAction="#numGridShow" prefHeight="25.0" prefWidth="115.0" text="0" />
-      <TextField fx:id="NumberAllMove" accessibleRole="TEXT" editable="false" layoutX="461.0" layoutY="200.0" prefHeight="25.0" prefWidth="139.0" text="Number All Move : 0" />
+      <TextField fx:id="NumGridShow" accessibleRole="TEXT" layoutX="461.0" layoutY="332.0" onAction="#numGridShow" prefHeight="25.0" prefWidth="115.0" text="0" />
+      <TextField fx:id="NumberAllMove" accessibleRole="TEXT" editable="false" layoutX="461.0" layoutY="307.0" prefHeight="25.0" prefWidth="139.0" text="Number All Move : 0" />
+      <JFXButton layoutX="461.0" layoutY="31.0" onAction="#StartAnimation" prefHeight="43.0" prefWidth="115.0" text="Start Animation" />
+      <JFXButton layoutX="461.0" layoutY="74.0" onAction="#StopAnimation" prefHeight="43.0" prefWidth="115.0" text="Stop Animation" />
    </children>
 </AnchorPane>
