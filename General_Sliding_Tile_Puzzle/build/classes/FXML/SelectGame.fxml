@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SelectGameController">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="600.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/c.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btn1" layoutY="1.0" onAction="#btn1" prefHeight="165.0" prefWidth="113.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="120.0" layoutY="1.0" onAction="#btn2" prefHeight="165.0" prefWidth="113.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="244.0" layoutY="1.0" onAction="#btn3" prefHeight="165.0" prefWidth="113.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="358.0" layoutY="7.0" onAction="#btn4" prefHeight="165.0" prefWidth="113.0" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="356.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="356.0" layoutY="322.0" onAction="#btn14" prefHeight="165.0" prefWidth="113.0" />
+      <JFXButton layoutX="469.0" layoutY="-3.0" onAction="#btn5" prefHeight="165.0" prefWidth="113.0" AnchorPane.bottomAnchor="388.0" AnchorPane.leftAnchor="473.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="121.0" layoutY="161.0" onAction="#btn7" prefHeight="165.0" prefWidth="113.0" />
+   </children>
+</AnchorPane>
